@@ -55,9 +55,9 @@ schema.methods.generateResetPasswordToken = function generateResetPasswordToken(
 			_id: this._id
 		},
 		process.env.JWT_SECRET,
-		{ expiresIn: "1s"}
+		{ expiresIn: "1h" }
 	);
-};
+}; 
 
 schema.methods.toAuthJSON = function toAuthJSON() {
 	return {
